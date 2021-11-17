@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Exercicios HTML</h1>
+    </header>
+    <nav>
+        <a href wb-nav="exercicios/teste.html">00 - teste</a> |
+        <a href wb-nav="exercicios/teste2.html">01 - teste2</a>
+    </nav>
+    <section id="conteudo"></section>   
+    <footer>
+        Curso de Web Moderno
+        <br>
+    </footer>
+    <script>
+        document.querySelectorAll('[wb-nav]').forEach(link =>{
+            const conteudo = document.getElementById('conteudo')
+
+           link.onclick = function(e){
+               e.preventDefault()
+               fetch(link.getAttribute('wb-nav'))
+               .then(resp => resp.text())
+               .then(html => conteudo.innerHTML = html)
+           }
+        })
+    </script>
+</body>
+</html>

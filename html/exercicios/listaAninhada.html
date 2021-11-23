@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,11 @@
 <body>
     <h1>Projeto</h1>
     <ul class="tree">
-        <li>Backend
+        <li>
+            <span wb-folder>Backend</span> 
             <ul>
-                <li>app
+                <li>
+                    <span wb-folder>app</span>
                     <ul>
                         <li>produto.js</li>
                         <li>usuario.js</li>
@@ -22,7 +24,7 @@
                     </ul>
                 </li>
                 <li>
-                    configuração
+                    <span wb-folder>configuração</span> 
                     <ul>
                         <li>banco.js</li>
                         <li>rotas.js</li>
@@ -32,9 +34,10 @@
             </ul>
         </li>
         <li>
-            frontend
+            <span wb-folder>frontend</span>
             <ul>
-                <li>public
+                <li>
+                    <span wb-folder>public</span>
                     <ul>
                         <li>app.css</li>
                         <li>app.js</li>
@@ -49,6 +52,18 @@
     </ul>
 
     <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+    <script>
+      
+        document.querySelectorAll('[wb-folder]').forEach(folder =>{
+          folder.onclick = function (e){
+              const  ul = folder.nextElementSibling
+              const display = ul.style.display
+              ul.style.display = display === 'none' ? 'block' : 'none'              
+          }
+        })    
+    
+    </script>    
 </body>
 
 </html>

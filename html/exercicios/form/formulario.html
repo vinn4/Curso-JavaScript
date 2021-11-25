@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+ <h1>Formulário</h1>
+ <form method="POST">
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="nome">
+    <input type="password" name="senha">
+    <textarea name="bio" cols="30" rows="10" ></textarea>
+    <div>
+        <input type="radio" name="tipo" value="admin"> Admin
+        <input type="radio" name="tipo" value="regular"> Regular
+        <input type="radio" name="tipo" value="professor"> Professor
+    </div>
+    <div>
+        <input type="checkbox" name="ativo">Ativo
+    </div>
+
+    <select name="estado" >
+        <option value="" >Selecione</option>
+        <option value="PR">Paraná</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="SP">São Paulo</option>
+    </select>
+    <select name="interesses" multiple size="5">
+        <option value="JS">JS</option>
+        <option value="PHP">PHP</option>
+        <option value="JAVA">JAVA</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+    </select>
+    
+    <button formaction="http://localhost:3003/usuarios"> Incluir </button>
+    <button formaction="http://localhost:3003/usuarios/3"> Alterar </button>
+ </form>
+ <style>
+     input, textarea, select{
+         display: block;
+         margin-bottom: 10px;
+     }
+     input[type=radio], input[type=checkbox]{
+         display: inline;
+     }
+ </style>
+</body>
+</html>

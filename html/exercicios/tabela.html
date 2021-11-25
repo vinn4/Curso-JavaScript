@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tabela</h1>
+    <table>
+        <caption>Produtos</caption>
+
+        <thead>
+            <tr>
+                <th>Produtos</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ipad</td>
+                <td>3280,00</td>
+                <td>2</td>
+                <td>6590,00</td>
+            </tr>
+            <tr>
+                <td>Sansung</td>
+                <td>1280,00</td>
+                <td>1</td>
+                <td>1280,00</td>
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>7870,00</td>
+            </tr>
+        </tfoot>
+    </table>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th,td {
+            padding: 10 px;
+        }
+        thead tr {
+            border-bottom: solid 2px #444;
+        }
+        tbody tr:hover {
+            border-bottom: solid 1px #444;
+            background-color: rgb(141, 141, 138);
+        }
+        tfoot {
+            background-color: #444;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+    </style>
+
+</body>
+
+</html>

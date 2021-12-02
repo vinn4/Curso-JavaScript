@@ -1,0 +1,23 @@
+body{
+    font-size: 30px;
+}
+ul, ol {
+    padding: 0;
+}
+li {
+    margin-left: 50px;
+}
+
+.tag {
+    border: solid 3px;
+    margin: 3px;
+}
+
+.tag label {
+    color: rgb(131, 76, 76);
+    font-size: 20px;
+    vertical-align: top;
+    margin-right: 10px;
+    padding: 0px 2px 3px 3px;
+
+}

@@ -7,7 +7,105 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            background-color: rgb(160, 157, 157);
+            font-family: 'Oswald';
+
+        }
+
+        .cabecalho {
+            background-color: rgb(61, 56, 56);
+            border-bottom: solid 2px blueviolet;
+            box-sizing: content-box;
+            height: 100px;
+
+        }
+
+        .logo {
+            display: inline-block;
+            height: 80px;
+            padding: 15px;
+        }
+
+        .logo img {
+            height: 100%;
+        }
+
+        .menu-toggle {
+            float: right;
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+
+        .menu,
+        ul,
+        li>a {
+            display: inline-block;
+            
+
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            padding: 15px;
+        }
+
+        .menu a {
+            padding: 15px;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(111, 111, 141);
+        }
+
+        .autenticacao {
+            float: right;
+            height: 100px;
+            padding: 25px;      
+        }
+
+        .botao {
+            border-radius: 25px;
+            padding: 4px;
+        }
+
+        .destaque {
+            background-color: tomato;
+            color: white;
+        }
+        .selected{
+            background-color: rgb(139, 138, 212);
+        }
+
+        .destaque:hover {
+            box-shadow: 2px 2px 1px 1px black;
+        }
+        @media (min-width: 679px){
+            .menu-toggle{display: none;}
+        }
+        @media (max-width:680px){
+            .menu{display: none;}
+        }
+        @media (max-width:910px){
+            .autenticacao{display: none;}
+        }
     </style>
 </head>
 
@@ -44,7 +142,14 @@
     </header>
 
     <script>
-        // ...
+       window.onhashchange = function(e){
+           const oldURL = e.oldURL.split('#')[1]
+           const newURL = e.newURL.split('#')[1]
+           const oldMenu = document.querySelector(`.menu [href='#${oldURL}']`)
+           const newMenu = document.querySelector(`.menu [href='#${newURL}']`)
+           oldMenu && oldMenu.classList.remove('selected')
+           newMenu && newMenu.classList.add('selected')
+       }
     </script>
 </body>
 

@@ -34,7 +34,8 @@
             for(let i = 0; i < expressoesComChaves.length; i++ ){
                 conteudoFinal = conteudoFinal.replace(expressoesComChaves[i],resultado[i])
             }
-            $(this).html(conteudoFinal)        
+            $(this).html(conteudoFinal)   
+            return this     
         }
        })(jQuery)
        $('div').interpretar()

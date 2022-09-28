@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vinicius Alexandre",
+      "email": "vinicius.v@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Rafael Lucas",
+      "email": "rafael.lucas@gmail.com"
+    },
+    {
+      "name": "vinicius",
+      "email": "vinicius.alex@vinicius.com",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "id": 8
+    }
+  ]
+}
